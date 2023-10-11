@@ -1,0 +1,30 @@
+.header {
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(#fff, .5);
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__instagram {
+    width: 24px;
+    height: 24px;
+
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    display: none;
+
+    @media only screen and (max-width: 768px) {
+      display: block;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+.sidebar {
+  width: 475px;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  background-color: #111;
+  padding: 40px 80px;
+  overflow: auto;
+  transform: translateX(1000px);
+  transition: all .5s;
+
+  @media only screen and (max-width: 1024px) {
+    padding: 30px;
+    width: 400px;
+  }
+
+  @media only screen and (max-width: 576px) {
+    width: 100%;
+  }
+
+  &--active {
+    transform: translateX(0);
+  }
+
+  &__close {
+    margin-bottom: 170px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+
+    @media only screen and (max-width: 1024px) {
+      margin-bottom: 50px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 80px;
+
+    @media only screen and (max-width: 1024px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+
+    @media only screen and (max-width: 1024px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__contacts {
+    margin-bottom: 60px;
+
+    @media only screen and (max-width: 1024px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__contacts-num {
+    display: block;
+    margin-bottom: 15px;
+    color: #fff;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__schedule-time {
+    display: block;
+    margin-bottom: 15px;
+  }
+}

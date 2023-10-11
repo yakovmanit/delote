@@ -1,0 +1,36 @@
+.top {
+  background-image: url(../images/bgc.png);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    // align-items: center;
+    height: 100vh;
+  }
+
+  &__scroll-down {
+    margin: 0 auto 100px;
+  }
+
+  &__scroll-down-button {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__scroll-down-icon {}
+
+  &__scroll-down-text {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .header .container {
+    padding: 0;
+  }
+}
