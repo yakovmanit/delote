@@ -1,0 +1,29 @@
+.contacts {
+  margin-top: 80px;
+
+  @media only screen and (max-width: 1024px) {
+    margin-top: 40px;
+  }
+
+  &__inner {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    @media only screen and (max-width: 1024px) {
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+    @media only screen and (max-width: 768px) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

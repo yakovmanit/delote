@@ -1,0 +1,44 @@
+.tabs-wrapper {
+  margin: 0 auto 60px;
+  overflow-x: auto;
+}
+
+.tabs {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  width: max-content;
+  margin: 0 auto;
+
+  @media only screen and (max-width: 1024px) {
+    justify-content: start;
+    gap: 25px;
+  }
+}
+
+.tab {
+  color: #fff;
+  @include adaptiv-font(24, 18);
+}
+
+.tab.tab--active {
+  position: relative;
+  color: #cdaa7d;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #cdaa7d;
+    bottom: 0;
+  }
+}
+
+.tabs-content {
+  display: none;
+}
+
+.tabs-content.tabs-content--active {
+  display: block;
+}

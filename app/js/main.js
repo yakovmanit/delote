@@ -1,3 +1,5 @@
+// JS
+
 // burger realization
 const close = document.querySelector('.sidebar__close-icon');
 const sidebar = document.querySelector('.sidebar');
@@ -52,3 +54,61 @@ backButtons.forEach(button => {
     card.classList.remove('changed');
   });
 });
+
+const servicesCards = document.querySelectorAll('.services__card');
+
+servicesCards.forEach(card =>{
+  card.classList.add('wow', 'animation-right');
+});
+
+
+// JQ
+$(function () {
+  // табы
+  ////////////////////////
+  $('.tab').on('click', function (e) {
+    // Отключает переход по ссылке куда-то
+    e.preventDefault();
+
+    $($(this).siblings()).removeClass('tab--active');
+    $($(this).closest('.tabs-wrapper').siblings().find('div')).removeClass('tabs-content--active');
+
+    // this значит добавление идет к тому элементу, на который нажали
+    $(this).addClass('tab--active');
+    $($(this).attr('href')).addClass('tabs-content--active');
+
+    // <div class="tabs-container">
+    //   <div class="tabs-wrapper">
+    //     <a class="tab tab--active" href="#tab-1">123</a>
+    //     <a class="tab " href="#tab-2">456</a>
+    //     <a class="tab " href="#tab-3">789</a>
+    //   </div>
+    //   <div class="tabs-container">
+    //     <div class="tabs-content tabs-content--active" id="tab-1">123</div>
+    //     <div class="tabs-content" id="tab-2">456</div>
+    //     <div class="tabs-content" id="tab-3">789</div>
+    //   </div>
+    // </div>
+
+  });
+
+
+    // $("[data-fancybox='gallery']").fancybox({
+       
+    // });
+
+    // scroll
+    $("a[href^='#']").click(function() {
+      const _href = $(this).attr("href");
+  
+      $("html, body").animate({scrollTop: $(_href).offset().top + "px"});
+  
+      return false;
+    });
+
+    new WOW().init();
+  });
+  
+// Fancybox.bind("[data-fancybox]", {
+//   arrows: true
+// });

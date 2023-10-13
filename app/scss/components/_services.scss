@@ -1,6 +1,10 @@
 .services {
   margin-bottom: 150px;
 
+  @media only screen and (max-width: 1024px) {
+    margin-bottom: 50px;
+  }
+
   &__inner {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -15,7 +19,36 @@
     }
   }
 
+  &__card {
 
+    &--big {
+      .services__card-wrapper {
+        height: 477px;
+
+        @media only screen and (max-width: 1240px) {
+          height: 400px;
+        }
+        @media only screen and (max-width: 768px) {
+          height: 350px;
+        }
+        @media only screen and (max-width: 640px) {
+          height: 300px;
+        }
+        @media only screen and (max-width: 576px) {
+          height: 477px;
+        }
+        @media only screen and (max-width: 425px) {
+          height: 420px;
+        }
+        @media only screen and (max-width: 375px) {
+          height: 360px;
+        }
+      }
+      .services__back-btn-more {
+        top: 85%;
+      }
+    }
+  }
 
   &__card-wrapper {
     position: relative;
@@ -28,7 +61,7 @@
     @media only screen and (max-width: 600px) {
       height: 320px;
     }
-    
+
     @media only screen and (max-width: 425px) {
       height: 250px;
     }
@@ -159,4 +192,5 @@
       }
     }
   }
+
 }

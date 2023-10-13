@@ -38,9 +38,19 @@ body {
     max-width: 550px;
     margin: 0 auto;
     text-align: center;
-    @include adaptiv-font(72, 40)
+    @include adaptiv-font(72, 40);
   }
- 
+
+  &--secondary {
+    text-align: center;
+    margin-bottom: 80px;
+    @include adaptiv-font(48, 30);
+
+    @media only screen and (max-width: 1024px) {
+      margin-bottom: 40px;
+    }
+  }
+
   &--tertiary {
     font-size: 24px;
   }
