@@ -55,12 +55,6 @@ backButtons.forEach(button => {
   });
 });
 
-const servicesCards = document.querySelectorAll('.services__card');
-
-servicesCards.forEach(card =>{
-  card.classList.add('wow', 'animation-right');
-});
-
 
 // JQ
 $(function () {
